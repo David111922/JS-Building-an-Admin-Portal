@@ -29,19 +29,10 @@ let submitButton = document.createElement('button');
             quantity: quantityInput.value
         })
          })
-        .then(response => {
-          if(response.ok){
-            console.log('updated successfully');
-          } else {
-            console.log( 'Failed to update quantity');
-         }
-      })
-      .catch(error => {
-console.error('Error', error);
-      });
-    });
-    li.appendChild(quantityInput);
-    li.appendChild(submitButton);
+        })
+      
+    li.append(quantityInput, submitButton)
+  
     root.appendChild(li);
 
  }
